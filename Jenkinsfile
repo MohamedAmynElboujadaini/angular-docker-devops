@@ -3,7 +3,7 @@ pipeline {
     stages {
   stage('SonarQube Analysis') {
     def scannerHome = tool 'SonarScanner';
-    withSonarQubeEnv() {
+    withSonarQubeEnv('sonar_qube_no_token') {
       bat "${scannerHome}/bin/sonar-scanner"
     }
   }

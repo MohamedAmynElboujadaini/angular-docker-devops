@@ -5,7 +5,7 @@ pipeline {
             steps {
                 script {
                     def scannerHome = tool 'sonar-scanner' // Use tool defined in Jenkins global tools
-                    withSonarQubeEnv("SonarQube") {
+                    withSonarQubeEnv("SonarQubeAngular") {
                         bat """
                             "${scannerHome}/bin/sonar-scanner" \
                               -Dsonar.projectKey=angulartest \
